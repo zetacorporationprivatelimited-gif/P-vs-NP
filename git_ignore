@@ -1,0 +1,10 @@
+# Never upload your secrets to GitHub
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+.venv/
