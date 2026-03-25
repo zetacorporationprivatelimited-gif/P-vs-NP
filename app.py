@@ -9,8 +9,17 @@ Run locally:
     streamlit run app.py
 """
 
+import subprocess
+import sys
+
+# Ensure anthropic is installed (handles Streamlit Cloud edge cases)
+try:
+    import anthropic
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "anthropic==0.40.0"])
+    import anthropic
+
 import streamlit as st
-import anthropic
 import time
 import json
 import base64
